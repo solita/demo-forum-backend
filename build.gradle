@@ -1,0 +1,16 @@
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile('org.apache.commons:commons-lang3:3.4')
+}
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.13'
+}
