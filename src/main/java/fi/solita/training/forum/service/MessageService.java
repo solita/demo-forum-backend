@@ -5,6 +5,8 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import fi.solita.training.forum.model.Message;
+
 @Service
 public class MessageService {
 
@@ -29,7 +31,6 @@ public class MessageService {
 		return null;
 	}
 
-	/*
 	private static MessageDto toMessageDto(Message message) {
 		MessageDto dto = new MessageDto();
 		dto.setId(message.getId());
@@ -37,6 +38,5 @@ public class MessageService {
 		dto.setContent(message.getContent());
 		return dto;
 	}
-	*/
 
 }
