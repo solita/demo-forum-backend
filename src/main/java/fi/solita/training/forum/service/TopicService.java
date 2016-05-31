@@ -23,7 +23,7 @@ public class TopicService {
 		return toTopicDto(topic);
 	}
 
-	@Transactional
+	@Transactional(readOnly=true)
 	public List<TopicDto> getAllTopics() {
 		return topicDao.findAll()
 			.stream()
