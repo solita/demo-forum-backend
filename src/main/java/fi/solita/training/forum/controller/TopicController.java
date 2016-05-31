@@ -22,7 +22,7 @@ public class TopicController {
         return topicService.getAllTopics();
     }
 
-	@RequestMapping(value="/topic", method=RequestMethod.PUT)
+	@RequestMapping(value="/topic", method=RequestMethod.POST)
 	public TopicDto addTopic(@RequestBody TopicDto dto) {
 		return topicService.addTopic(dto);
 	}

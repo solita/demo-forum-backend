@@ -23,7 +23,7 @@ public class MessageController {
         return messageService.getMessagesForTopic(topicId);
     }
 
-    @RequestMapping(value="/topic/{topicId}/message", method=RequestMethod.PUT)
+    @RequestMapping(value="/topic/{topicId}/message", method=RequestMethod.POST)
     public MessageDto addMessage(@PathVariable long topicId, @RequestBody MessageDto dto) {
         return messageService.addMessagesForTopic(topicId, dto);
     }
