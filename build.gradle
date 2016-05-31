@@ -21,6 +21,7 @@ repositories {
 }
 
 dependencies {
+  compile fileTree('libs')
   compile('org.springframework.boot:spring-boot-starter-web')
   compile('org.springframework:spring-context-support')
   compile('org.apache.commons:commons-lang3:3.4')
