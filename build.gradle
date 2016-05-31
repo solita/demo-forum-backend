@@ -23,7 +23,9 @@ repositories {
 dependencies {
   compile fileTree('libs')
   compile('org.springframework.boot:spring-boot-starter-web')
+  compile('org.springframework.boot:spring-boot-starter-data-jpa')
   compile('org.springframework:spring-context-support')
+  compile('com.h2database:h2:1.4.192')
   compile('org.apache.commons:commons-lang3:3.4')
 }
 
