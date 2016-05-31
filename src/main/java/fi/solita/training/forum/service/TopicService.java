@@ -1,43 +1,42 @@
 package fi.solita.training.forum.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import fi.solita.training.forum.dao.TopicDao;
+import fi.solita.training.forum.model.Topic;
 
 @Service
 public class TopicService {
 
+	@Autowired
+	private TopicDao topicDao;
+
 	@Transactional
 	public TopicDto addTopic(TopicDto dto) {
-		/*
-		Topic topic = new Topic(dto.getTitle())
+		Topic topic = new Topic(dto.getTitle());
 		topicDao.save(topic);
 		return toTopicDto(topic);
-		*/
-		return null;
 	}
 
 	@Transactional
 	public List<TopicDto> getAllTopics() {
-		/*
-		List<TopicDto> result = new ArrayList<TopicDto>();
-		for (Topic topic : topicDao.findAll()) {
-			result.add(toTopicDto(topic));
-		}
-		return result;
-		*/
-		return null;
+		return topicDao.findAll()
+			.stream()
+			.map(t -> toTopicDto(t))
+			.collect(Collectors.toList());
 	}
 
-	/*
-	private TopicDto toTopicDto(Topic topic) {
+	private static TopicDto toTopicDto(Topic topic) {
 		TopicDto dto = new TopicDto();
 		dto.setId(topic.getId());
 		dto.setTitle(topic.getTitle());
 		dto.setMessageCount(topic.getMessageCount());
 		return dto;
 	}
-	 */
 
 }
