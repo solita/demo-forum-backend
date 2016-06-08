@@ -23,7 +23,7 @@ public class TopicService {
 	@Transactional(readOnly=true)
 	public List<TopicDto> getAllTopics() {
 		/*
-		return topicDao.findAll()
+		return topicDao.findAllOrdered()
 			.stream()
 			.map(t -> toTopicDto(t))
 			.collect(Collectors.toList());
