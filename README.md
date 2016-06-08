@@ -15,22 +15,22 @@ This is the starting point of the demo. The branch contains a simple "Hello Worl
 
 
 ## version_1
-This step adds Spring Boot to the project. After this step the project can already be run the from IDE or from command line: java -jar build/libs/demo-forum-backend.jar
-The web server can be accessed with URL http://localhost:8080. The web server still responds with error page because no content is available yet.
+This step adds Spring Boot to the project. After this step the project can already be run the from IDE or from command line: **java -jar build/libs/demo-forum-backend.jar**
+The web server can be accessed with URL **http://localhost:8080**. The web server still responds with error page because no content is available yet.
 
 1. Update build.gradle with Spring Boot dependencies
 2. Update App.class to be main function for Spring Boot application
 
 
 ## version_2
-This step adds the frontend as a dependency jar. After this step the UI of the application can be accessed using URL http://localhost:8080/webjars/forum/index.html
+This step adds the frontend as a dependency jar. After this step the UI of the application can be accessed using URL **http://localhost:8080/webjars/forum/index.html**
 The REST API is still missing so expect to get JavaScript errors when using the application.
 
 1. Update build.gradle with dependency to libs directory
 
 
 ## version_3
-This step adds database to the application. The used database is a light-weight H2 embedded database that does not require installation. The data of the database is written to the demo-fofum-backend/db directory. The database can be reset at any time by deleting the directory and restarting the application.
+This step adds database to the application. The used database is a light-weight H2 embedded database that does not require installation. The data of the database is written to the demo-demo-forum-backend/db directory. The database can be reset at any time by deleting the directory and restarting the application.
 
 1. Update build.gradle with JPA and H2 dependencies
 2. Add database configuration to application.properties file
@@ -53,3 +53,13 @@ This step adds Controller, Service and Model layers to the project.
 This step adds DAO layer to the project. The DAOs are created using Spring JpaRepository-mechanism. After this step we have a fully working backend implementation.
 
 1. Uncomment code in the service classes (TopicService, MessageService) and create the missing DAO interfaces (TopicDao, MessageDao) to dao package.
+
+
+### References
+- http://www.oracle.com/technetwork/java/index.html
+- https://eclipse.org/
+- http://gradle.org/
+- http://projects.spring.io/spring-boot/
+- http://docs.spring.io/spring-data/data-commons/docs/1.6.1.RELEASE/reference/html/repositories.html
+- https://flywaydb.org/
+- http://www.h2database.com/html/main.html
