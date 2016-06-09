@@ -59,7 +59,11 @@ This step adds DAO layer to the project. The DAOs are created using Spring JpaRe
 - http://www.oracle.com/technetwork/java/index.html
 - https://eclipse.org/
 - http://gradle.org/
+- http://mvnrepository.com/
 - http://projects.spring.io/spring-boot/
+- http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
+- http://tomcat.apache.org/
 - http://docs.spring.io/spring-data/data-commons/docs/1.6.1.RELEASE/reference/html/repositories.html
+- http://hibernate.org/orm/
 - https://flywaydb.org/
 - http://www.h2database.com/html/main.html
